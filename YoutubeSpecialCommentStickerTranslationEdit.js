@@ -73,9 +73,9 @@
         let val2 = pattern2.test(String(text));
         let val3 = pattern3.test(String(text));
 
-        if (val === true || val2 === true || val3 === true){
-            console.log('Translation: [en] ' + val + " en- "+ val2 + ' en - ' + val3);
-        }
+        //if (val === true || val2 === true || val3 === true){
+        //    console.log('Translation: [en] ' + val + " en- "+ val2 + ' en - ' + val3);
+        //}
         
         return (val || val2 || val3);
     };
