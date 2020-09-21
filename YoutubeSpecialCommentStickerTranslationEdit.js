@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         YoutubeSpecialCommentSticker
+// @name         YoutubeSpecialCommentStickerTranslationEdit
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
@@ -64,6 +64,22 @@
         return true;
     };
 
+    let isTranslation = (text) => {
+        let pattern = /^\[en\]/i;
+        let pattern2 = /^en-/i;
+        let pattern3 = /^en\s-/i;
+
+        let val = pattern.test(String(text));
+        let val2 = pattern2.test(String(text));
+        let val3 = pattern3.test(String(text));
+
+        if (val === true || val2 === true || val3 === true){
+            console.log('Translation: [en] ' + val + " en- "+ val2 + ' en - ' + val3);
+        }
+        
+        return (val || val2 || val3);
+    };
+
     let isUnique = (node) => {
         return !stickyItemObjectsMap[`${node.querySelector('#timestamp').innerText}-${node.querySelector('#author-name').innerText}-${node.querySelector('#message').innerText}`];
     };
@@ -114,7 +130,10 @@
 
     let stickItem = (node) => {
         let authorElement = node.querySelector('#author-name');
-        if (authorElement && isSpecial(authorElement) && isUnique(node)) {
+        
+        //console.log('message: ' + node.querySelector('#message').innerText);
+
+        if (authorElement && (isSpecial(authorElement) || isTranslation(node.querySelector('#message').innerText)) && isUnique(node)) {
             let stickyItem = document.createElement('div');
             let authorPhoto = document.createElement('div');
             let content = document.createElement('div');
