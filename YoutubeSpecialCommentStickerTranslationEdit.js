@@ -78,6 +78,7 @@
         return patterns
         .map(function(pattern) {return pattern.test(text);})
         .some(function(matched) {return matched === true; });
+
     };
 
     let isUnique = (node) => {
