@@ -65,19 +65,19 @@
     };
 
     let isTranslation = (text) => {
-        let pattern = /^\[en\]/i;
-        let pattern2 = /^en-/i;
-        let pattern3 = /^en\s-/i;
 
-        let val = pattern.test(String(text));
-        let val2 = pattern2.test(String(text));
-        let val3 = pattern3.test(String(text));
+        let patterns = [
+            /^\[en\]/i,
+            /^en-/i,
+            /^en\s-/i,
+            /^en:/i,
+            /^translation:/i,
+            /^tr:/i
+        ];
 
-        if (val === true || val2 === true || val3 === true){
-            console.log('Translation: [en] ' + val + " en- "+ val2 + ' en - ' + val3);
-        }
-        
-        return (val || val2 || val3);
+        return patterns
+        .map(function(pattern) {return pattern.test(text);})
+        .some(function(matched) {return matched === true; });
     };
 
     let isUnique = (node) => {

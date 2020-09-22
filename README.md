@@ -11,3 +11,5 @@ Currently I check for messages that start with the following:
 - `[EN]`
 - `EN-`
 - `EN -`
+- `EN:`
+- `Translation:`
