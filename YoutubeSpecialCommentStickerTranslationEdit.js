@@ -72,13 +72,15 @@
             /^en\s-/i,
             /^en:/i,
             /^translation:/i,
-            /^tr:/i
+            /^tr:/i,
+            /^Korone:/i,
+            /^Korone-/i,
+            /^Korone\s-/i,
         ];
 
         return patterns
         .map(function(pattern) {return pattern.test(text);})
         .some(function(matched) {return matched === true; });
-
     };
 
     let isUnique = (node) => {
@@ -132,8 +134,6 @@
     let stickItem = (node) => {
         let authorElement = node.querySelector('#author-name');
         
-        //console.log('message: ' + node.querySelector('#message').innerText);
-
         if (authorElement && (isSpecial(authorElement) || isTranslation(node.querySelector('#message').innerText)) && isUnique(node)) {
             let stickyItem = document.createElement('div');
             let authorPhoto = document.createElement('div');

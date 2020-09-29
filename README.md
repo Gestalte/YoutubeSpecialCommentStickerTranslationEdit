@@ -13,3 +13,6 @@ Currently I check for messages that start with the following:
 - `EN -`
 - `EN:`
 - `Translation:`
+- `Korone:`
+- `Korone-`
+- `Korone -`
