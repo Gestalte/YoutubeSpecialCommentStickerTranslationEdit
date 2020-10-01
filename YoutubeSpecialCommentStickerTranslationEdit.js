@@ -67,15 +67,10 @@
     let isTranslation = (text) => {
 
         let patterns = [
-            /^\[en\]/i,
-            /^en-/i,
-            /^en\s-/i,
-            /^en:/i,
-            /^translation:/i,
-            /^tr:/i,
-            /^Korone:/i,
-            /^Korone-/i,
-            /^Korone\s-/i,
+            /(^\/?en\s?(:|-)|^\/?\[en\])/i,
+            /(^\/?translation\s?(:|-)|^\/?\[translation\])/i,
+            /(^\/?tr\s?(:|-)|^\/?\[tr\])/i,
+            /(^\/?korone\s?(:|-\s)|^\/?\[korone\])/i,
         ];
 
         return patterns

@@ -7,12 +7,36 @@ Youtube Special Comment Sticker is a script for the [Tampermonkey Add-on](https:
 This edit also adds chat messages left by people doing live translations to this window.
 
 # How are live translations identified?
-Currently I check for messages that start with the following:
-- `[EN]`
-- `EN-`
-- `EN -`
-- `EN:`
-- `Translation:`
-- `Korone:`
-- `Korone-`
-- `Korone -`
+Currently I do a case insensitive check for messages that start with the following:
+`[EN]`
+`EN:`
+`EN-`
+`EN -`
+`/[EN]`
+`/EN:`
+`/EN-`
+`/EN -`
+`[translation]`
+`translation:`
+`translation-`
+`translation -`
+`/[translation]`
+`/translation:`
+`/translation-`
+`/translation -`
+`[tr]`
+`tr:`
+`tr-`
+`tr -`
+`/[tr]`
+`/tr:`
+`/tr-`
+`/tr -`
+`[Korone]`
+`Korone:`
+`Korone-`
+`Korone -`
+`/[Korone]`
+`/Korone:`
+`/Korone-`
+`/Korone -`
