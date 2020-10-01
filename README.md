@@ -16,7 +16,7 @@ Currently I do a case insensitive check for messages that start with the followi
 - `/EN:`
 - `/EN-`
 - `/EN -`
--`[英訳/EN]`
+- `[英訳/EN]`
 - `[translation]`
 - `translation:`
 - `translation-`
