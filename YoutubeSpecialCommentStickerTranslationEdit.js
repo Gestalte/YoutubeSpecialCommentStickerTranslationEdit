@@ -65,9 +65,10 @@
     };
 
     let isTranslation = (text) => {
-
+        //英訳
         let patterns = [
-            /(^\/?en\s?(:|-)|^\/?\[en\])/i,
+            /(^\/?(英訳)?en\s?(:|-)|^\/?\[en\])/i,
+            /(^\/?en\s?(:|-)|^\/?\[[英訳\/]+?en\])/i,
             /(^\/?translation\s?(:|-)|^\/?\[translation\])/i,
             /(^\/?tr\s?(:|-)|^\/?\[tr\])/i,
             /(^\/?korone\s?(:|-\s)|^\/?\[korone\])/i,
