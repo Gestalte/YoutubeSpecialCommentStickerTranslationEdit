@@ -65,18 +65,9 @@
     };
 
     let isTranslation = (text) => {
-        //英訳
-        let patterns = [
-            /(^\/?(英訳)?en\s?(:|-)|^\/?\[en\])/i,
-            /(^\/?en\s?(:|-)|^\/?\[[英訳\/]+?en\])/i,
-            /(^\/?translation\s?(:|-)|^\/?\[translation\])/i,
-            /(^\/?tr\s?(:|-)|^\/?\[tr\])/i,
-            /(^\/?korone\s?(:|-\s)|^\/?\[korone\])/i,
-        ];
+        let pattern = /(^\/?(英訳|英訳\/en|en|tr|translation|korone)\s?[:-]|^\/?\[(英訳|英訳\/en|en|tr|translation|korone)\])/i;
 
-        return patterns
-        .map(function(pattern) {return pattern.test(text);})
-        .some(function(matched) {return matched === true; });
+        return pattern.test(text);
     };
 
     let isUnique = (node) => {
