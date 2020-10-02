@@ -44,7 +44,9 @@ Currently I do a case insensitive check for messages that start with the followi
 - `英訳:`
 - `英訳-`
 - `英訳 -`
+- `/[英訳]`
+- `/英訳:`
+- `/英訳-`
+- `/英訳 -`
 - `[英訳/EN]`
-- `[英訳/EN]:`
-- `[英訳/EN]-`
-- `[英訳/EN] -`
+- `/[英訳/EN]`
