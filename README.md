@@ -15,7 +15,9 @@ Currently I do a case insensitive check for messages that start with the followi
 | `EN:` | `translation:` | `tr:` | `Korone:` | `英訳:` | `英訳/EN:`
 | `EN-` | `translation-` | `tr-` | `Korone-` | `英訳-` | `英訳/EN-`
 | `EN -` | `translation -` | `tr -` | `Korone -` | `英訳 -` | `英訳/EN -`
+| `EN}` | `translation}` | `tr}` | `Korone}` | `英訳}` | `英訳/EN}`
 | `/[EN]` | `/[translation]` | `/[tr]` | `/[Korone]` | `/[英訳]` | `/[英訳/EN]`
 | `/EN:` | `/translation:` | `/tr:` | `/Korone:` | `/英訳:` | `/英訳/EN:`
 | `/EN-` | `/translation-` | `/tr-` | `/Korone-` | `/英訳-` | `/英訳/EN-`
 | `/EN -` | `/translation -` | `/tr -` | `/Korone -` | `/英訳 -` | `/英訳/EN -`
+| `/EN}` | `/translation}` | `/tr}` | `/Korone}` | `/英訳}` | `/英訳/EN}`
