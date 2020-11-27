@@ -120,8 +120,8 @@
 
     let stickItem = (node) => {
         let authorElement = node.querySelector('#author-name');
-        
-        if (authorElement && (isSpecial(authorElement) || isTranslation(node.querySelector('#message').innerText)) && isUnique(node)) {
+
+        if (authorElement && (isSpecial(authorElement) || isTranslation(node.querySelector('#message').innerText.trim())) && isUnique(node)) {
             let stickyItem = document.createElement('div');
             let authorPhoto = document.createElement('div');
             let content = document.createElement('div');
