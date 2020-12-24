@@ -65,7 +65,7 @@
     };
 
     let isTranslation = (text) => {
-        let pattern = /(^\/?(英訳|英訳\/en|en|tr|translation|korone|pol)(\s?:|\s?-|\})\s|^\/?\[(英訳|英訳\/en|en|tr|translation|korone|pol)\])/i;
+        let pattern = /(^\/?(英訳|英訳\/en|en|tr|translation|korone|pol)(\s?:|\s?-|\s?\})\s|^\/?\[(英訳|英訳\/en|en|tr|translation|korone|pol)\])/i;
 
         return pattern.test(text);
     };
