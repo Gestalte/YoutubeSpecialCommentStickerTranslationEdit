@@ -10,7 +10,7 @@ This edit also adds chat messages left by people doing live translations to this
 Currently I do a case insensitive check for messages that start with the following:
 
 | EN | translation | tr | Korone | Pol | 英訳 | 英訳/EN
-| -- | ----------- | -- | ------ | -- | -----
+| -- | ----------- | -- | ------ | --- | -- | -----
 | `[EN]` | `[translation]` | `[tr]` | `[Korone]`| `[Pol]` | `[英訳]` | `[英訳/EN]`
 | `EN:` | `translation:` | `tr:` | `Korone:`| `Pol:` | `英訳:` | `英訳/EN:`
 | `EN :` | `translation :` | `tr :` | `Korone :`| `Pol :` | `英訳 :` | `英訳/EN :`
